@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>API</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Comme&family=Poppins:wght@400;700&family=Source+Code+Pro:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/styles.css">
+    </head>
+    <body>
+        <div id="background"></div>
+        <div id="noauth" class="main">
+            <h1>Not Authenticated</h1>
+            <input placeholder="Username" id="usernameInput"><br>
+            <input placeholder="Password" id="passwordInput"><br>
+            <button id="loginBtn" class="authBtn">Login</button>
+            <button id="signupBtn" class="authBtn">Sign Up</button>
+        </div>
+        <div id="auth" class="main">
+            <h1>Authenticated</h1>
+            <p id="keyDisplay">API Key: XXXXXXXXX</p>
+            <p id="callsDisplay">API Calls: XXXXXXXXX</p>
+            <button id="logoutBtn">Logout</button>
+        </div>
+        <script src="/script.js"></script>
+    </body>
+</html>
