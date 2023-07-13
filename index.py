@@ -3,12 +3,13 @@ from fastapi.params import Body
 from pydantic import BaseModel
 from typing import Optional
 from datetime import datetime
-from typing import Annotated
 from fastapi import Depends, FastAPI
 from fastapi.security import OAuth2PasswordBearer
 from fastapi.responses import FileResponse
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
+import string
+import random
 
 uri = "mongodb+srv://michaelsutu:cxgWzARj9HyQlOYj@cluster0.kgl30mi.mongodb.net/?retryWrites=true&w=majority"
 client = MongoClient(uri, server_api=ServerApi('1'))
@@ -27,10 +28,6 @@ def authKey(key):
         return True
     else:
         return False
-
-@app.get("/items/")
-async def read_items(token: Annotated[str, Depends(oauth2_scheme)]):
-    return {"token": token}
 
 class Post(BaseModel):
     mrn:int
