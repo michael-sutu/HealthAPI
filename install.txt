@@ -1,0 +1,10 @@
+Gunicorn
+fastapi
+pydantic
+typing
+datetime
+json
+pymongo
+flask
+string
+random
