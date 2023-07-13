@@ -7,12 +7,8 @@ from typing import Annotated
 from fastapi import Depends, FastAPI
 from fastapi.security import OAuth2PasswordBearer
 from fastapi.responses import FileResponse
-import json
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
-from flask import request
-import string
-import random
 
 uri = "mongodb+srv://michaelsutu:cxgWzARj9HyQlOYj@cluster0.kgl30mi.mongodb.net/?retryWrites=true&w=majority"
 client = MongoClient(uri, server_api=ServerApi('1'))
